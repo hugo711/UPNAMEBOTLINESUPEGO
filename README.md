@@ -22,23 +22,6 @@ if you like what i do, maybe consider buying me a coffee/tea 🥺👉👈
 ⏳  Longest streak is 10 days
 <!-- TODO-IST:END -->
 
-
-
-
-# namegenerator
-
-A random name generator (for projects, servers, cluster nodes, etc ...)
-implementation in Golang.
-
-## Badges
-
-[![License][License-Image]][License-URL]
-[![CircleCI Status][CircleCI-Image]][CircleCI-URL]
-[![Coverage Report][Coverage-Image]][Coverage-URL]
-[![Go Report Card][GoReportCard-Image]][GoReportCard-URL]
-[![CII Best Practices][CII-Image]][CII-URL]
-[![GoDoc][GoDoc-Image]][GoDoc-URL]
-
 ## Install
 
 ```bash
@@ -48,24 +31,10 @@ go get github.com/goombaio/namegenerator
 You can also update an already installed version:
 
 ```bash
-go get -u github.com/goombaio/namegenerator
+go get -u github.com/hugo711/UPNAMEBOTLINESUPEGO
 ```
 
 ## Example of use
 
 ```go
 package main
-
-import (
-    "github.com/goombaio/namegenerator"
-)
-
-func main() {
-    seed := time.Now().UTC().UnixNano()
-    nameGenerator := namegenerator.NewNameGenerator(seed)
-
-    name := nameGenerator.Generate()
-
-    fmt.Println(name)
-}
-```
