@@ -25,7 +25,7 @@ if you like what i do, maybe consider buying me a coffee/tea 🥺👉👈
 ## Install
 
 ```bash
-go get github.com/goombaio/namegenerator
+go get github.com/ugo711/UPNAMEBOTLINESUPEGO
 ```
 
 You can also update an already installed version:
