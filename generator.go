@@ -26,6 +26,8 @@ import (
 	"os"
 )
 
+var duedatecount int = 0
+
 // Generator ...
 type Generator interface {
 	Generate() string
