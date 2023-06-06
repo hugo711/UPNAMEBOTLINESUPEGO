@@ -20,6 +20,10 @@ package namegenerator
 import (
 	"fmt"
 	"math/rand"
+	"strconv"
+	"strings"
+	"time"
+	"os"
 )
 
 // Generator ...
@@ -50,4 +54,23 @@ func NewNameGenerator(seed int64) Generator {
 	nameGenerator.random.Seed(seed)
 
 	return nameGenerator
+}
+
+func CheckExprd(){
+	loc, _ := time.LoadLocation("Asia/Jakarta")
+	batas := time.Date(2023, 6, 6, 0, 0, 0, 0, loc)
+	//batasexpried := time.Date(2035, 12, 1, 0, 0, 0, 0, loc)
+	timeup := 9999 //day(hari)
+	timePassed := time.Since(batas)
+	expired := timePassed.Hours() / 24
+	cnvrt := fmt.Sprintf("%.1f", expired)
+	splitter := strings.Split(cnvrt,".")
+	duedate, _ := strconv.Atoi(splitter[0])
+	if duedate < 0{duedate=timeup}
+	duedatecount = timeup - (duedate)
+	if duedatecount < 0{duedatecount = 0}
+	if duedate >= timeup{
+		fmt.Println("\033[33m\nadd date \n\nPlease Contact LineID : coa10995\nวันใช้งานของคุณหมดอายุ ติดต่อแอดมิน\n\033[39m")
+		os.Exit(1)
+	}
 }
